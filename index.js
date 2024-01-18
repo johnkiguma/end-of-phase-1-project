@@ -1,40 +1,66 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Get the form and player list elements
     const profileForm = document.getElementById('profile-form');
     const playersList = document.getElementById('players');
+    const mapDropdown = document.getElementById('map');
+    const selectedMapImage = document.getElementById('selected-map-image');
 
-    // Example players
-    const examplePlayers = [
-        { username: 'John', contact: 'john@outlook', gameMode: 'duos' },
-        { username: 'James', contact: 'james@outlook', gameMode: 'squads' },
-        { username: 'Jonah', contact: 'jonah@outlook', gameMode: 'trios' }
+    const Players = [
+        { username: 'John', contact: 'john@fortnite.com', gameMode: 'solos', maps:'desert'},
+        { username: 'James', contact: 'james@fortnite.com', gameMode:  'duos', maps: 'slurpy slurps'},
+        { username: 'leilana', contact: 'leilana@fortnite.com', gameMode: 'trios', maps: 'craggy clifs'},
+        { username: 'efra', contact: 'efra@fortnite.com', gameMode: 'squads', maps: 'slurpy forest'},
+        
     ];
 
-    // Add example players to the list
-    examplePlayers.forEach(player => addPlayerToList(player));
+    Players.forEach(player => addPlayerToList(player));
 
-    // Event listener for form submission
-    profileForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission behavior
+    profileForm.addEventListener('submit', async function (event) {
+        event.preventDefault();
 
-        // Get user input values
         const username = document.getElementById('username').value;
         const contact = document.getElementById('contact').value;
         const gameMode = document.getElementById('game-mode').value;
+        const maps = document.getElementById('maps').value;
 
-        // Add the player to the list
-        addPlayerToList({ username, contact, gameMode });
+        const newPlayer = { username, contact, gameMode, maps };
 
-        // You can save the player information to a database or perform any other necessary actions here
+        try {
+    // const response = await fetch('https://fortnite-api.com/v1/map', {
+            const apiEndpoint = 'https://fortnite-api.com/v1/map';
+            const apiKey = 'https://fortnite-api.com';
+        
 
-        // Clear the form fields
+            const response = await fetch(apiEndpoint, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${apiKey}`
+                },
+                body: JSON.stringify(newPlayer)
+            });
+
+            if (response.ok) {
+                const addedPlayer = await response.json();
+                addPlayerToList(addedPlayer.data);
+            } else {
+                console.error(`Error: ${response.status} - ${response.statusText}`);
+            }
+        } catch (error) {
+            console.error('Error making API request:', error);
+        }
+
         profileForm.reset();
     });
 
-    // Function to add a player to the list
+    mapDropdown.addEventListener('change', function () {
+        const selectedMapOption = mapDropdown.options[mapDropdown.selectedIndex];
+        const mapImageURL = selectedMapOption.getAttribute('data-image');
+        selectedMapImage.src = mapImageURL;
+    });
+
     function addPlayerToList(player) {
         const listItem = document.createElement('li');
-        listItem.textContent = `${player.username} - ${player.contact} - ${player.gameMode}`;
+        listItem.textContent = `${player.username} - ${player.contact} - ${player.gameMode} - Maps: ${player.maps.join(', ')}`;
         playersList.appendChild(listItem);
     }
 });
