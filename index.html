@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Fortnite Connect Kenya</title>
-    </head>
+    <link rel="icon" href="./logo.jpg" />
+    <title>FKC</title>
+</head>
+
 <body>
 
     <header>
-        <h1>Your Fortnite Connect Kenya Logo</h1>
-        <p>Welcome to the community for Fortnite gamers in Kenya!</p>
+        <img src="./logo.jpg" alt="logo" class="logo" />
+        <nav>
+            <a href="https://store.epicgames.com/en-US/p/fortnite">
+                <img src="./brand-epicgames-svgrepo-com.svg" alt="epicgames" class="epicgames">
+            </a>
+        </nav>
     </header>
 
-    <section id="player-form">
-        <h2>Player Information</h2>
-        <form id="profile-form">
-            <label for="username">Fortnite Username:</label>
-            <input type="text" id="username" name="username" required>
+    <section class="player-form">
+        <h2 class="player-header">Player Information</h2>
+        <form class="profile-form">
+            <div class="fortnite-username">
+                <label class="username-tag" for="username">Fortnite Username:</label>
+                <input type="text" class="username" name="username" required>
+            </div>
 
             <label for="contact">Contact Information:</label>
             <input type="text" id="contact" name="contact" required>
@@ -46,4 +55,5 @@
 
     <script src="index.js"></script>
 </body>
+
 </html>

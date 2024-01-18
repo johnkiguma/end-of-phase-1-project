@@ -1,51 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,500&family=Varela&family=Varela+Round&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'League-Spartan', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    color: #333;
 }
 
 header {
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
-}
-
-section {
+    background: linear-gradient(45deg, #4a90e2, #4caf50);
     padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-footer {
+    height: 30px;
     text-align: center;
-    padding: 1em;
-    background-color: #3498db;
-    color: #fff;
+    position: relative;
+    z-index: 1;
 }
 
-input, select {
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 76rem;
+    margin-top: -0.4rem;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70rem;
+    margin-top: -4.7rem;
+}
+
+.epicgames {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.epicgames:hover{
+    text-decoration: underline (rgba(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), 0.4));
+    transition: all 600ms ease-in;
+}
+
+.player-form {
+    background: linear-gradient(90deg, #333, #555);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    margin: 20px;
+}
+
+.player-header {
+    color: #4a90e2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.username-tag {
+    font-size: 14px;
+    color: #4a90e2;
+}
+
+.fortnite-username {
+    position: relative;
+}
+
+.username {
     width: 100%;
     padding: 10px;
-    margin: 5px 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: none;
+    background: #444;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    transition: ease-in 400ms;
+}
+
+.username:hover,
+.username:focus {
+    background: #555;
+}
+
+label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #4caf50;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #444;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    transition:ease-in 400ms;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus,
+select:hover,
+select:focus {
+    background: #555;
 }
 
 button {
-    background-color: #3498db;
+    background: linear-gradient(90deg, #4a90e2, #4caf50);
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: ease 400ms;
 }
 
-#playersList li {
-    margin-bottom: 5px;
+button:hover {
+    background: linear-gradient(90deg, #4caf50, #4a90e2);
+}
+
+#players-list,
+#competition-info {
+    margin: 20px;
+    padding: 20px;
+    background: #333;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    color: #4a90e2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    text-align: center;
 }
