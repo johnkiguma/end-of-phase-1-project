@@ -1,3 +1,4 @@
+
 const apiKey = 'https://fortnite-api.com/v1/playlists';
 const maps = ['desert', 'forest','slurpy forest','slurpy slurps', 'craggy cliffs'];
 const examplePlayerData = [
