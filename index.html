@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FORTNITE CONNECT KENYA</title>
+    <link rel="stylesheet" href="index.css">
+    <title>Fortnite Connect Kenya</title>
 </head>
 <body>
+
     <header>
-        <img src="" alt="" class="logo"/>
-        <nav>
-            <a href="" >
-                <img src="" alt="" class="epicgames">
-            </a>
-
-            <a href="" >
-                <img src="" alt="" class="settings">
-            </a>
-        </nav>
+         <p>Welcome to the community for Fortnite gamers in Kenya!</p>
     </header>
-    <main>
-        <section>
-            <div class="player-info">
-                <img src="" alt="" class=""/>
-                <h2 class="player-header">Player Information</h2>
-                <form class="player-input">
-                    <label class="username-tag" for="username">Fortnite Username:</label>
-                    <input type="text" class="username" name="username" required>
 
-                    <label for="contact">Contact Information:</label>
-                    <input type="text" id="contact" name="contact" required>
-                    
-                    
+        <div class="header-icons">
+            <img src="https://cdn2.unrealengine.com/12br-delay-social-news-header-02-1920x1080-119208936.jpg" alt="Fortnite Connect Kenya Logo">
+            <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord Icon">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7ClE5DhMspeksOZaClAZgtJRc0Tlmpn4hwr6BV8r3BQ&s" alt="Xbox Controller Icon">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgBmT2jAwCN4GcftBx1t-_bXUHbL3hOvqOYbDc5wMsOw&s" alt="Person Head Icon">
+            
+        </div class=welcoming points >
+            <p>Welcome to the future for Fortnite cool stop points in kenya </p>
+       
+        </div>
+        <div class="GAMERS">
+        <h1> WELCOME GAMERS  </h1>
+    </header>
+
+    <h2>Player Information</h2>
+    <form id="profile-form">
+        <label for="username">Fortnite Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="contact">Contact Information:</label>
+        <input type="text" id="contact" name="contact" required>
+
+
+            <label for="contact">Contact Information:</label>
+            <input type="text" id="contact" name="contact" required>
+
             <label for="game-mode">Preferred Game Mode:</label>
             <select id="game-mode" name="game-mode">
                 <option value="duos">Duos</option>
@@ -39,41 +46,57 @@
                 <option value="solos">Solos</option>
             </select>
 
-            <button type="submit">Submit</button>
-                </form>
-            </div>
-        </section>
-        <section id="players-list">
-            <img src="" alt="" class=""/>
-            <h2>Players List</h2>
-            <ul id="players">
-            </ul>
-        </section>
-        <section id="new-events">
-            <img src="" alt="" class=""/>
-            <h2>New Events</h2>
-            <img src="" alt="" class=""/>
-            <p>Stay tuned for exciting events and prizes!</p>
-        </section>
-    </main>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </section>
+
+
+    <label for="map selection">Preferred map:</label>
+    <select id=" available map" name="map selection">
+        <option value="sandy shores">sandy shores</option>
+        <option value="slurpy swamps">slurpy swamps</option>
+        <option value="craggy cliffs">craggy cliffs</option>
+        <option value="pleasant park">pleasant park </option>
+    </select>
+
+
+
+    <section id="map-section">
+        <div class="map-container">
+           <h2>Map Information</h2>
+            <span id="map-name"></span></p>
+         <p>Map Location: <span id="map-location"></span></p>
+         <p>Map Difficulty: <span id="map-difficulty"></span></p>
+         <p>number of  Players: <span id="map-players"></span></p>
+        <p><span id="map-description"></span></p>
+          
+        <section id 
+           
+            
+            
+        </div>
+    </section>
+
+
+    <section id="players-list">
+        <h2>Players List</h2>
+        <ul id="players"></ul>
+    </section>
+
+    
+    <section id="competition-info">
+        <h2>Upcoming Competitions</h2>
+        <p>Stay tuned for exciting competitions and prizes!</p>
+    </section>
 
     <footer>
-        <div class="social-icons">
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                <!-- Replace the "#" with the actual link to your social media profile -->
-                <img src="path-to-facebook-icon.png" alt="Facebook">
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                <!-- Replace the "#" with the actual link to your social media profile -->
-                <img src="path-to-twitter-icon.png" alt="Twitter">
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                <!-- Replace the "#" with the actual link to your social media profile -->
-                <img src="path-to-instagram-icon.png" alt="Instagram">
-            </a>
-            <!-- Add more social media icons as needed -->
+        <div class="footer-icons">
+            <img src="https://cdn.icon-icons.com/icons2/2428/PNG/512/epic_games_black_logo_icon_147139.png" alt="Epic Games Icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Copyright.svg/480px-Copyright.svg.png" alt="Copyright Icon">
         </div>
-        <p>&copy; 2024 FKC. All rights reserved.</p>
+        <p>&copy; 2024 Fortnite Connect Kenya. All rights reserved.</p>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
