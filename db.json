@@ -1,9 +1,19 @@
 {
-    "Players": [
-      { "id": 1, "username": "John", "contact": "john@fortnite.com", "gameMode": "solos", "maps": ["desert", "forest"] },
-      { "id": 2, "username": "James", "contact": "james@fortnite.com", "gameMode": "duos", "maps": ["slurpy slurps"] },
-      { "id": 3, "username": "leilana", "contact": "leilana@fortnite.com", "gameMode": "trios", "maps": ["craggy cliffs"] },
-      { "id": 4, "username": "efra", "contact": "efra@fortnite.com", "gameMode": "squads", "maps": ["slurpy forest"] }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
-  
+}
