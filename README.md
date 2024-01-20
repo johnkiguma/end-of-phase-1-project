@@ -1,4 +1,22 @@
 # end-of-phase-1-project
+# Project Name
+fortnite connect kenya
+
+#project author 
+johnkiguma
+
+#description
+The project is an online hotel booking web whereby you can book exclusive hotels.
+
+#display
+
+It should display the hotels and the booking button, the names of the hotel, the socials of the fortnite connect kenya , the abouts of the company 
+
+#license
+mit license
+
+
+## Description
 
 
     Home
